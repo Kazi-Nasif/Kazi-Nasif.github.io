@@ -79,7 +79,7 @@ li { margin-bottom: 0.3rem; }
 .container {
   max-width: 860px;
   margin: 0 auto;
-  padding: 40px 48px 80px;
+  padding: 18px 48px 80px;
   border-left: 1px solid #d4d4d4;
   border-right: 1px solid #d4d4d4;
   background: #fff;
@@ -110,7 +110,7 @@ hr {
 /* ── ABOUT ───────────────────────────────────────────────── */
 .about-block {
   display: flex; gap: 40px; align-items: flex-start;
-  margin-bottom: 0; padding-top: 16px;
+  margin-bottom: 0; padding-top: 0;
 }
 .about-text { flex: 1; min-width: 0; }
 .about-photo {
@@ -136,7 +136,7 @@ h1 {
   line-height: 1.7;
 }
 .about-seeking {
-  margin-top: 12px; font-size: 0.93rem;
+  margin-top: 8px; font-size: 0.93rem;
   font-family: system-ui, sans-serif;
   color: #333; line-height: 1.6;
   border-left: 3px solid #1a57a0;
@@ -146,6 +146,7 @@ h1 {
   margin-top: 12px; font-size: 0.9rem;
   font-family: system-ui, sans-serif;
   color: #333;
+  white-space: nowrap;
 }
 .contact-line {
   list-style: none; padding: 0;
@@ -258,9 +259,10 @@ h1 {
 @media (max-width: 700px) {
   .site-header { flex-direction: column; align-items: flex-start; padding: 12px 20px; }
   .nav { gap: 12px; }
-  .container { padding: 24px 20px 60px; }
+  .container { padding: 16px 20px 60px; }
   .about-block { flex-direction: column-reverse; }
   .about-photo { width: 140px; }
+  .about-interests { white-space: normal; }
   .exp-header { flex-direction: column; gap: 2px; }
   .footer { flex-direction: column; gap: 6px; padding: 16px 20px; }
   .news-list li { flex-direction: column; gap: 2px; }
@@ -295,11 +297,11 @@ h1 {
           <a href="https://www.kennesaw.edu/">Kennesaw State University</a>, Marietta, Georgia, USA
         </p>
         <p class="about-title">Advisor: <a href="https://ksuweb.kennesaw.edu/~bdeng2/">Dr. Bobin Deng</a></p>
-        <p class="about-seeking">
-          I am actively seeking <strong>tenure-track Assistant Professor</strong> and <strong>postdoctoral</strong> positions in AI, computational biology, bioinformatics, computer vision, and related fields, starting <strong>Fall 2027</strong>.
-        </p>
         <p class="about-interests">
-          <strong>Research Interests:</strong> Bioinformatics · Molecular Dynamics · Protein-Protein Docking · Large Language Models · Computer Vision · Federated Learning · Edge Computing · Spatio-temporal AI
+          <strong>Research Interests:</strong> Bioinformatics, Large Language Models, Computer Vision, Edge Computing
+        </p>
+        <p class="about-seeking">
+          I am actively seeking <strong>tenure-track Assistant Professor</strong> and <strong>postdoctoral</strong> positions, starting <strong>Fall 2027</strong>.
         </p>
         <ul class="contact-line">
           <li><a href="https://scholar.google.com/citations?hl=en&user=zbsZV9QAAAAJ">Google Scholar</a></li>
@@ -317,7 +319,7 @@ h1 {
       <p class="section-note">Full list on <a href="https://scholar.google.com/citations?hl=en&user=zbsZV9QAAAAJ">Google Scholar</a>.</p>
 
       <h3 class="pub-year">2026</h3>
-      <ol class="pub-list">
+      <ol class="pub-list" start="10">
         <li>
           <span class="pub-authors">L. Chen*, Y. Deng, Z. Dai, S. Niu, C. Tao, K. F. A. Nasif*, <strong>B. Deng</strong>, Y. Xie,</span>
           <span class="pub-title">"Mechanistic Validation and Structural Analysis of PAH-Associated SOX17 for Real-World Relevance",</span>
@@ -327,7 +329,7 @@ h1 {
       </ol>
 
       <h3 class="pub-year">2025</h3>
-      <ol class="pub-list">
+      <ol class="pub-list" start="6">
         <li>
           <span class="pub-authors"><strong>Kazi Fahim Ahmad Nasif</strong>, Bobin Deng, Yixin Xie, Syed Md Shamsul Alam, Lingtao Chen, Nobel Dhar, Kun Suo, Dan Chia-Tien Lo,</span>
           <span class="pub-title"><a href="https://ieeexplore.ieee.org/document/11272755">"AccelMD: A Self-adaptive AI-enabled Framework for Accelerating Molecular Dynamics Simulations"</a>,</span>
@@ -355,7 +357,7 @@ h1 {
       </ol>
 
       <h3 class="pub-year">2024</h3>
-      <ol class="pub-list" start="5">
+      <ol class="pub-list" start="2">
         <li>
           <span class="pub-authors">Nobel Dhar, Bobin Deng, Md Romyull Islam, <strong>Kazi Fahim Ahmad Nasif</strong>, Liang Zhao, Kun Suo,</span>
           <span class="pub-title"><a href="https://arxiv.org/pdf/2412.12178">"Activation Sparsity Opportunities for Compressing General Large Language Models"</a>,</span>
@@ -393,7 +395,7 @@ h1 {
       </ol>
 
       <h3 class="pub-year">Patent</h3>
-      <ol class="pub-list">
+      <ol class="pub-list" start="11">
         <li>
           <span class="pub-authors">Bobin Deng, <strong>Kazi Fahim Ahmad Nasif</strong>, Nobel Dhar, Rahim Snow, George Harbison, Michael Parlotto,</span>
           <span class="pub-title">"Systems and Methods for Using Edge Devices in Multi-Modal Vision Models",</span>
