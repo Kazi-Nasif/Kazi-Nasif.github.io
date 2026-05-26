@@ -180,18 +180,42 @@ h1 {
   border: none !important;
   font-weight: 700;
 }
-.pub-list { padding-left: 1.5rem; }
-.pub-list li {
-  margin-bottom: 14px;
-  font-size: 0.93rem;
-  line-height: 1.6;
+.pub-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style-position: inside;
 }
-.pub-authors { display: block; color: #333; }
-.pub-title { display: block; font-style: italic; }
+.pub-list li {
+  margin-bottom: 12px;
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+.pub-list li::marker {
+  content: "[" counter(list-item) "] ";
+  font-weight: 700;
+}
+.pub-authors,
+.pub-title,
+.pub-venue,
+.pub-note {
+  display: inline;
+}
+.pub-authors { color: #333; }
+.pub-title { font-style: normal; }
 .pub-title a { color: #1a1a1a; }
 .pub-title a:hover { color: #1a57a0; }
-.pub-venue { display: block; color: #555; font-style: normal; font-family: system-ui, sans-serif; font-size: 0.88rem; }
-.pub-note { display: block; font-size: 0.84rem; color: #1a57a0; font-style: normal; font-family: system-ui, sans-serif; margin-top: 1px; }
+.pub-venue {
+  color: #333;
+  font-style: normal;
+  font-family: inherit;
+  font-size: 0.96rem;
+}
+.pub-note {
+  font-size: 0.96rem;
+  color: #1a1a1a;
+  font-style: italic;
+  font-family: system-ui, sans-serif;
+}
 
 /* ── EXPERIENCE ──────────────────────────────────────────── */
 .exp-block { margin-bottom: 22px; }
@@ -295,75 +319,86 @@ h1 {
       <h3 class="pub-year">2026</h3>
       <ol class="pub-list">
         <li>
-          <span class="pub-authors">L. Chen, Y. Deng, Z. Dai, S. Niu, C. Tao, <strong>K. F. A. Nasif*</strong>, B. Deng, Y. Xie.</span>
-          <span class="pub-title">Mechanistic Validation and Structural Analysis of PAH-Associated SOX17 for Real-World Relevance.</span>
-          <span class="pub-venue">14th IEEE International Conference on Healthcare Informatics, Minneapolis, USA (<strong>IEEE ICHI 2026</strong>). <em>Accepted.</em></span>
+          <span class="pub-authors">L. Chen*, Y. Deng, Z. Dai, S. Niu, C. Tao, K. F. A. Nasif*, <strong>B. Deng</strong>, Y. Xie,</span>
+          <span class="pub-title">"Mechanistic Validation and Structural Analysis of PAH-Associated SOX17 for Real-World Relevance",</span>
+          <span class="pub-venue">The 14th IEEE International Conference on Healthcare Informatics, Minneapolis, USA, 2026.</span>
+          <span class="pub-note">(<strong>IEEE ICHI 2026</strong>) (Accepted)</span>
         </li>
       </ol>
 
       <h3 class="pub-year">2025</h3>
       <ol class="pub-list">
         <li>
-          <span class="pub-authors"><strong>Kazi Fahim Ahmad Nasif</strong>, Bobin Deng, Yixin Xie, Syed Md Shamsul Alam, Lingtao Chen, Nobel Dhar, Kun Suo, Dan Chia-Tien Lo.</span>
-          <span class="pub-title"><a href="https://ieeexplore.ieee.org/document/11272755">AccelMD: A Self-adaptive AI-enabled Framework for Accelerating Molecular Dynamics Simulations.</a></span>
-          <span class="pub-venue">37th IEEE International Conference on Tools with Artificial Intelligence (<strong>ICTAI 2025</strong>).</span>
+          <span class="pub-authors"><strong>Kazi Fahim Ahmad Nasif</strong>, Bobin Deng, Yixin Xie, Syed Md Shamsul Alam, Lingtao Chen, Nobel Dhar, Kun Suo, Dan Chia-Tien Lo,</span>
+          <span class="pub-title"><a href="https://ieeexplore.ieee.org/document/11272755">"AccelMD: A Self-adaptive AI-enabled Framework for Accelerating Molecular Dynamics Simulations"</a>,</span>
+          <span class="pub-venue">The 37th IEEE International Conference on Tools with Artificial Intelligence, 2025.</span>
+          <span class="pub-note">(<strong>ICTAI 2025</strong>)</span>
         </li>
         <li>
-          <span class="pub-authors">L. Chen, <strong>K. A. Nasif</strong>, M. Yang, S. Niu, B. Deng, Y. Xie.</span>
-          <span class="pub-title"><a href="https://ieeexplore.ieee.org/document/11272631">Automatic Molecular Dynamics Simulation with Binding Affinity Prediction Using Deep Learning.</a></span>
-          <span class="pub-venue">37th IEEE International Conference on Tools with Artificial Intelligence (<strong>ICTAI 2025</strong>).</span>
+          <span class="pub-authors">L. Chen, <strong>K. A. Nasif</strong>, M. Yang, S. Niu, B. Deng, Y. Xie,</span>
+          <span class="pub-title"><a href="https://ieeexplore.ieee.org/document/11272631">"Automatic Molecular Dynamics Simulation with Binding Affinity Prediction Using Deep Learning"</a>,</span>
+          <span class="pub-venue">The 37th IEEE International Conference on Tools with Artificial Intelligence, 2025.</span>
+          <span class="pub-note">(<strong>ICTAI 2025</strong>)</span>
         </li>
         <li>
-          <span class="pub-authors">Z. Elghazzali, Y. Xie, C. Zhao, B. Deng, L. Chen, <strong>K. A. Nasif</strong>.</span>
-          <span class="pub-title"><a href="https://ieeexplore.ieee.org/document/11272620">Multimodal Deep Learning for Alzheimer's Disease Classification: A Practical Fusion Framework for Clinical Deployment.</a></span>
-          <span class="pub-venue">37th IEEE International Conference on Tools with Artificial Intelligence (<strong>ICTAI 2025</strong>).</span>
+          <span class="pub-authors">Z. Elghazzali, Y. Xie, C. Zhao, B. Deng, L. Chen, <strong>K. A. Nasif</strong>,</span>
+          <span class="pub-title"><a href="https://ieeexplore.ieee.org/document/11272620">"Multimodal Deep Learning for Alzheimer's Disease Classification: A Practical Fusion Framework for Clinical Deployment"</a>,</span>
+          <span class="pub-venue">The 37th IEEE International Conference on Tools with Artificial Intelligence, 2025.</span>
+          <span class="pub-note">(<strong>ICTAI 2025</strong>)</span>
         </li>
         <li>
-          <span class="pub-authors">Md Nurul Absur, Sourya Saha, Sifat Nawrin Nova, <strong>Kazi Fahim Ahmad Nasif</strong>, Md Rahat Ul Nasib.</span>
-          <span class="pub-title"><a href="https://arxiv.org/pdf/2412.09474">Optimizing CDN Architectures: Multi-Metric Algorithmic Breakthroughs for Edge and Distributed Performance.</a></span>
-          <span class="pub-venue">2025 International Conference on Computing, Networking and Communications (<strong>ICNC 2025</strong>).</span>
+          <span class="pub-authors">Md Nurul Absur, Sourya Saha, Sifat Nawrin Nova, <strong>Kazi Fahim Ahmad Nasif</strong>, Md Rahat Ul Nasib,</span>
+          <span class="pub-title"><a href="https://arxiv.org/pdf/2412.09474">"Optimizing CDN Architectures: Multi-Metric Algorithmic Breakthroughs for Edge and Distributed Performance"</a>,</span>
+          <span class="pub-venue">International Conference on Computing, Networking and Communications, 2025.</span>
+          <span class="pub-note">(<strong>ICNC 2025</strong>)</span>
         </li>
       </ol>
 
       <h3 class="pub-year">2024</h3>
       <ol class="pub-list" start="5">
         <li>
-          <span class="pub-authors">Nobel Dhar, Bobin Deng, Md Romyull Islam, <strong>Kazi Fahim Ahmad Nasif</strong>, Liang Zhao, Kun Suo.</span>
-          <span class="pub-title"><a href="https://arxiv.org/pdf/2412.12178">Activation Sparsity Opportunities for Compressing General Large Language Models.</a></span>
-          <span class="pub-venue">43rd IEEE International Performance Computing and Communications Conference (<strong>IPCCC 2024</strong>).</span>
+          <span class="pub-authors">Nobel Dhar, Bobin Deng, Md Romyull Islam, <strong>Kazi Fahim Ahmad Nasif</strong>, Liang Zhao, Kun Suo,</span>
+          <span class="pub-title"><a href="https://arxiv.org/pdf/2412.12178">"Activation Sparsity Opportunities for Compressing General Large Language Models"</a>,</span>
+          <span class="pub-venue">The 43rd IEEE International Performance Computing and Communications Conference, 2024.</span>
+          <span class="pub-note">(<strong>IPCCC 2024</strong>)</span>
         </li>
         <li>
-          <span class="pub-authors">M. N. Absur, <strong>K. F. A. Nasif</strong>, S. Saha, S. N. Nova.</span>
-          <span class="pub-title"><a href="https://openreview.net/pdf?id=PA9oNmX5gB">Revolutionizing Image Recognition: Next-Generation CNN Architectures for Handwritten Digits and Objects.</a></span>
-          <span class="pub-venue">2024 IEEE Symposium on Wireless Technology &amp; Applications (<strong>ISWTA 2024</strong>), Kuala Lumpur, Malaysia.</span>
+          <span class="pub-authors">M. N. Absur, <strong>K. F. A. Nasif</strong>, S. Saha, S. N. Nova,</span>
+          <span class="pub-title"><a href="https://openreview.net/pdf?id=PA9oNmX5gB">"Revolutionizing Image Recognition: Next-Generation CNN Architectures for Handwritten Digits and Objects"</a>,</span>
+          <span class="pub-venue">IEEE Symposium on Wireless Technology &amp; Applications, Kuala Lumpur, Malaysia, 2024.</span>
+          <span class="pub-note">(<strong>ISWTA 2024</strong>)</span>
         </li>
         <li>
-          <span class="pub-authors">Chen, Lingtao, Qiaomu Li, <strong>Kazi Fahim Ahmad Nasif</strong>, Ying Xie, Bobin Deng, Shuteng Niu, Seyedamin Pouriyeh, Zhiyu Dai, Jiawei Chen, and Chloe Yixin Xie.</span>
-          <span class="pub-title"><a href="https://www.mdpi.com/1422-0067/25/15/8426">AI-Driven Deep Learning Techniques in Protein Structure Prediction.</a></span>
-          <span class="pub-venue"><em>International Journal of Molecular Sciences</em> 25, no. 15: 8426. <strong>MDPI, 2024</strong>.</span>
+          <span class="pub-authors">L. Chen, Q. Li, <strong>Kazi Fahim Ahmad Nasif</strong>, Y. Xie, B. Deng, S. Niu, S. Pouriyeh, Z. Dai, J. Chen, C. Y. Xie,</span>
+          <span class="pub-title"><a href="https://www.mdpi.com/1422-0067/25/15/8426">"AI-Driven Deep Learning Techniques in Protein Structure Prediction"</a>,</span>
+          <span class="pub-venue"><em>International Journal of Molecular Sciences</em> 25, no. 15: 8426, 2024.</span>
+          <span class="pub-note">(<strong>MDPI 2024</strong>)</span>
         </li>
         <li>
-          <span class="pub-authors">Lingtao Chen, <strong>Kazi Fahim Ahmad Nasif</strong>, Bobin Deng, Shuten Niu, Chloe Yixin Xie.</span>
-          <span class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10849366">Predicting Protein-Protein Binding Affinity with Deep Learning: A Comparative Analysis of CNN and Transformer Models.</a></span>
-          <span class="pub-venue">36th IEEE International Conference on Tools with Artificial Intelligence (<strong>ICTAI 2024</strong>).</span>
+          <span class="pub-authors">Lingtao Chen, <strong>Kazi Fahim Ahmad Nasif</strong>, Bobin Deng, Shuten Niu, Chloe Yixin Xie,</span>
+          <span class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10849366">"Predicting Protein-Protein Binding Affinity with Deep Learning: A Comparative Analysis of CNN and Transformer Models"</a>,</span>
+          <span class="pub-venue">The 36th IEEE International Conference on Tools with Artificial Intelligence, 2024.</span>
+          <span class="pub-note">(<strong>ICTAI 2024</strong>)</span>
         </li>
       </ol>
 
       <h3 class="pub-year">2019</h3>
       <ol class="pub-list" start="9">
         <li>
-          <span class="pub-authors"><strong>K. F. Ahmed Nasif</strong>, M. Nurul Absur, M. Al Mamun.</span>
-          <span class="pub-title"><a href="https://www.researchgate.net/profile/Kazi-Nasif/publication/348145527_Order_Dependency_in_Sequential_Correlation/links/610ff4c80c2bfa282a2f68ae/Order-Dependency-in-Sequential-Correlation.pdf">Order Dependency in Sequential Correlation.</a></span>
-          <span class="pub-venue">2019 3rd International Conference on Electrical, Computer &amp; Telecommunication Engineering (<strong>ICECTE 2019</strong>).</span>
+          <span class="pub-authors"><strong>K. F. Ahmed Nasif</strong>, M. Nurul Absur, M. Al Mamun,</span>
+          <span class="pub-title"><a href="https://www.researchgate.net/profile/Kazi-Nasif/publication/348145527_Order_Dependency_in_Sequential_Correlation/links/610ff4c80c2bfa282a2f68ae/Order-Dependency-in-Sequential-Correlation.pdf">"Order Dependency in Sequential Correlation"</a>,</span>
+          <span class="pub-venue">The 3rd International Conference on Electrical, Computer &amp; Telecommunication Engineering, 2019.</span>
+          <span class="pub-note">(<strong>ICECTE 2019</strong>)</span>
         </li>
       </ol>
 
       <h3 class="pub-year">Patent</h3>
       <ol class="pub-list">
         <li>
-          <span class="pub-authors">Bobin Deng, <strong>Kazi Fahim Ahmad Nasif</strong>, Nobel Dhar, Rahim Snow, George Harbison, Michael Parlotto.</span>
-          <span class="pub-title">Systems and Methods for Using Edge Devices in Multi-Modal Vision Models.</span>
-          <span class="pub-venue">Provisional Patent Application (Filed), Registration No. 52494, Docket No. 62941.2834, <strong>InComm Payments</strong>, 2024.</span>
+          <span class="pub-authors">Bobin Deng, <strong>Kazi Fahim Ahmad Nasif</strong>, Nobel Dhar, Rahim Snow, George Harbison, Michael Parlotto,</span>
+          <span class="pub-title">"Systems and Methods for Using Edge Devices in Multi-Modal Vision Models",</span>
+          <span class="pub-venue">Provisional Patent Application, Registration No. 52494, Docket No. 62941.2834, <strong>InComm Payments</strong>, 2024.</span>
+          <span class="pub-note">(Filed)</span>
         </li>
       </ol>
     </section>
