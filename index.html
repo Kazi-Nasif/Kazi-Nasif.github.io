@@ -220,12 +220,26 @@ h1 {
 
 /* ── RESEARCH PROTOTYPES ────────────────────────────────── */
 .prototype-list {
-  list-style-position: outside;
-  padding-left: 1.5rem;
+  list-style: none;
+  counter-reset: prototype;
+  padding-left: 0;
 }
 .prototype-list li {
+  counter-increment: prototype;
+  display: grid;
+  grid-template-columns: 2.2rem minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
   margin-bottom: 16px;
-  padding-left: 4px;
+  padding-left: 0;
+}
+.prototype-list li::before {
+  content: "[" counter(prototype) "]";
+  font-weight: 700;
+  align-self: center;
+}
+.prototype-list li::marker {
+  content: "";
 }
 .prototype-card {
   display: grid;
