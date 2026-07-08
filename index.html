@@ -218,6 +218,65 @@ h1 {
   font-family: system-ui, sans-serif;
 }
 
+/* ── RESEARCH PROTOTYPES ────────────────────────────────── */
+.prototype-list {
+  list-style-position: outside;
+  padding-left: 1.5rem;
+}
+.prototype-list li {
+  margin-bottom: 16px;
+  padding-left: 4px;
+}
+.prototype-card {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+.prototype-thumb {
+  display: block;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #f6f8fa;
+}
+.prototype-thumb img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top left;
+}
+.prototype-body {
+  min-width: 0;
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+.prototype-title {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.prototype-title a { color: #1a1a1a; }
+.prototype-title a:hover { color: #1a57a0; }
+.prototype-action {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: #1a57a0;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.prototype-action:hover,
+.prototype-action:focus {
+  background: #123f75;
+  color: #fff;
+  text-decoration: none;
+}
+
 /* ── EXPERIENCE ──────────────────────────────────────────── */
 .exp-block { margin-bottom: 22px; }
 .exp-header {
@@ -263,6 +322,8 @@ h1 {
   .about-block { flex-direction: column-reverse; }
   .about-photo { width: 140px; }
   .about-interests { white-space: normal; }
+  .prototype-card { grid-template-columns: 1fr; }
+  .prototype-thumb { max-width: 320px; }
   .exp-header { flex-direction: column; gap: 2px; }
   .footer { flex-direction: column; gap: 6px; padding: 16px 20px; }
   .news-list li { flex-direction: column; gap: 2px; }
@@ -427,14 +488,32 @@ h1 {
     <!-- ═══════════ RESEARCH PROTOTYPES ═══════════ -->
     <section id="research-prototypes">
       <h2>Research Prototypes</h2>
-      <ol class="pub-list" start="1">
+      <ol class="pub-list prototype-list" start="1">
         <li>
-          <span class="pub-title"><a href="https://dock-graph-web.vercel.app/">DockGraph</a>,</span>
-          <span class="pub-venue">interactive research prototype for graph-based protein-protein docking workflows.</span>
+          <div class="prototype-card">
+            <a class="prototype-thumb" href="https://dock-graph-web.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open DockGraph prototype in a new tab">
+              <img src="assets/prototype-dockgraph.png" alt="Screenshot of the DockGraph prototype">
+            </a>
+            <div class="prototype-body">
+              <span class="prototype-title"><a href="https://dock-graph-web.vercel.app/" target="_blank" rel="noopener noreferrer">DockGraph</a></span>
+              <span class="pub-venue">is an interactive research prototype for graph-based protein-protein docking workflows.</span>
+              <br>
+              <a class="prototype-action" href="https://dock-graph-web.vercel.app/" target="_blank" rel="noopener noreferrer">Open prototype</a>
+            </div>
+          </div>
         </li>
         <li>
-          <span class="pub-title"><a href="https://spacecondensenet.vercel.app/">SpaceCondenseNet</a>,</span>
-          <span class="pub-venue">interactive research prototype for compact and efficient deep learning architecture exploration.</span>
+          <div class="prototype-card">
+            <a class="prototype-thumb" href="https://spacecondensenet.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open SpaceCondenseNet prototype in a new tab">
+              <img src="assets/prototype-spacecondensenet.png" alt="Screenshot of the SpaceCondenseNet prototype">
+            </a>
+            <div class="prototype-body">
+              <span class="prototype-title"><a href="https://spacecondensenet.vercel.app/" target="_blank" rel="noopener noreferrer">SpaceCondenseNet</a></span>
+              <span class="pub-venue">is a web-based space protein research tool for predicting and visualizing how proteins may aggregate, phase-separate, or become structurally vulnerable under microgravity-inspired transport conditions.</span>
+              <br>
+              <a class="prototype-action" href="https://spacecondensenet.vercel.app/" target="_blank" rel="noopener noreferrer">Open prototype</a>
+            </div>
+          </div>
         </li>
       </ol>
     </section>
